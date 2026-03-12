@@ -1,0 +1,9 @@
+{"level":"info","message":"Redis client connected","service":"ai-backend","timestamp":"2026-03-12T12:16:33.908Z"}
+{"level":"info","message":"Redis connection established successfully","service":"ai-backend","timestamp":"2026-03-12T12:16:33.923Z"}
+{"environment":"development","level":"info","message":"Server running on port 3001","port":3001,"service":"ai-backend","timestamp":"2026-03-12T12:16:33.928Z"}
+{"level":"info","message":"Redis client connected","service":"ai-backend","timestamp":"2026-03-12T12:19:28.712Z"}
+{"level":"info","message":"Redis connection established successfully","service":"ai-backend","timestamp":"2026-03-12T12:19:28.727Z"}
+{"environment":"development","level":"info","message":"Server running on port 3001","port":3001,"service":"ai-backend","timestamp":"2026-03-12T12:19:28.734Z"}
+{"level":"info","message":"Redis client connected","service":"ai-backend","timestamp":"2026-03-12T12:19:33.571Z"}
+{"level":"info","message":"Redis connection established successfully","service":"ai-backend","timestamp":"2026-03-12T12:19:33.573Z"}
+{"environment":"development","level":"info","message":"Server running on port 3001","port":3001,"service":"ai-backend","timestamp":"2026-03-12T12:19:33.575Z"}

@@ -1,0 +1,42 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: deploy
+          key: ${{ secrets.SERVER_SSH_KEY }}
+
+          script: |
+            cd ~/ai-backend || git clone https://github.com/parthbhimani151-oss/ai-backend.git
+
+            cd ~/ai-backend
+
+            git pull origin main
+
+            docker stop ai-backend || true
+            docker rm ai-backend || true
+
+            docker build -t ai-backend .
+
+            docker run -d \
+              -p 3001:3001 \
+              --restart unless-stopped \
+              -e REDIS_URL=redis://127.0.0.1:6379 \
+              --name ai-backend \
+              ai-backend
